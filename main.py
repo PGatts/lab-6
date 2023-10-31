@@ -1,6 +1,8 @@
 # Param Gattupalli
 # COP3502C Lab 6
 
+# Juliana added the decode function
+
 # Encode the password by adding 3 to each digit
 def encode(password):
     encoded_password = ''
@@ -10,7 +12,11 @@ def encode(password):
 
 
 def decode(encoded_password):
-    pass
+    decoded_password = ''
+    for digit in encoded_password:
+        decoded_password += str((int(digit)-3) % 10)
+    return decoded_password
+
 
 def main():
     choice, encoded_password = 0, ''
